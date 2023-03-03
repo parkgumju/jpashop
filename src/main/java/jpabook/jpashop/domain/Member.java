@@ -22,21 +22,20 @@ public class Member {
     @OneToMany(mappedBy = "member")
     private List<Order>  orders = new ArrayList<>();
 
-    //연관 관계 매서드
-    public void setMember(Member member) {
-        this.member = member;
-        member.getOrders().add(this);
-
-    }
-
-    public void addOrderItem(OrderItem orderItem){
-        orderItem.add(orderItem);
-        orderItem.setOrder(this);
-    }
-
-    public void setDelivery(Delivery delivery) {
-        this.delivery = delivery;
-        delivery.setOrder(this);
-    }
+//    //연관 관계 매서드
+//    public void setMember(Member member) {
+//        this.member = member;
+//        member.getOrders().add(this);
+//    }
+//
+//    public void addOrderItem(OrderItem orderItem){
+//        orderItem.add(orderItem);
+//        orderItem.setOrder(this);
+//    }
+//
+//    public void setDelivery(Delivery delivery) {
+//        this.delivery = delivery;
+//        delivery.setOrder(this);
+//    }
 
 }
